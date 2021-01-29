@@ -1,0 +1,16 @@
+body {
+	background-color: $red;
+	background-image: url("../images/bg-intro-desktop.png");
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-position: right;
+	color: white;
+	line-height: 1.1;
+	@media only screen and (max-width: 768px) {
+		background-image: url("../images/bg-intro-mobile.png");
+	}
+}
+
+html {
+	position: relative;
+}

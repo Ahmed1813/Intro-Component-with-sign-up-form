@@ -1,0 +1,163 @@
+.form-container {
+	width: 60rem;
+
+	&.expand {
+		transform: scale(0.8);
+	}
+
+	button.try-it {
+		@include flex;
+		background-color: $blue;
+		box-shadow: 0 0.8rem 0.2rem $lightBlack;
+
+		span:first-child {
+			font-weight: fontWeight(semiBold);
+			color: white;
+			margin-right: 0.5rem;
+		}
+
+		span:last-child {
+			color: darken($color: white, $amount: 10%);
+		}
+	}
+
+	form {
+		width: 100%;
+		margin: 1rem 0 0 0;
+		background-color: white;
+		padding: 2rem;
+		border-radius: 0.8rem;
+		box-shadow: 0 0.8rem 0.2rem $lightBlack;
+
+		label {
+			margin-bottom: 2rem;
+			display: block;
+			position: relative;
+			span {
+				margin: 0.4rem;
+				display: block;
+				color: $red;
+				font-style: italic;
+				font-weight: 600;
+				font-size: 0.8rem;
+				direction: rtl;
+			}
+
+			&.invalid input {
+				border: 0.2rem solid $red;
+				&:focus {
+					border-color: $red;
+					outline: none;
+				}
+			}
+
+			&.invalid::before {
+				content: "";
+				position: absolute;
+				width: 2rem;
+				height: 2rem;
+				right: 1rem;
+				top: 1rem;
+				background-repeat: no-repeat;
+				background-image: url("../images/icon-error.svg");
+			}
+		}
+
+		input {
+			display: block;
+			width: 100%;
+			border-radius: 0.3rem;
+			font-weight: 600;
+			color: $dark-blue;
+			font-size: 1rem;
+			padding: 1rem;
+			// padding-right: 5rem;
+			caret-color: $blue;
+			border: 0.1rem solid $grayish-blue;
+
+			&:focus {
+				border-color: $dark-blue;
+			}
+
+			&::placeholder {
+				font-family: $font-family;
+				font-size: 1rem;
+				color: lighten($color: $dark-blue, $amount: 30%);
+				font-weight: 600;
+			}
+
+			&.name {
+				text-transform: capitalize;
+			}
+		}
+
+		button.smb {
+			text-transform: uppercase;
+			background-color: $green;
+			color: white;
+			box-shadow: 0 0.5rem 0.2rem lighten($color: $green, $amount: 10%);
+
+			&:active {
+				background-color: whiteOverlay($green);
+				transform: scale(0.97);
+			}
+		}
+
+		p {
+			font-size: 0.8rem;
+			color: $grayish-blue;
+			margin-top: 1.5rem;
+			text-align: center;
+			font-weight: 500;
+			a {
+				color: $red;
+				font-weight: 600;
+				text-decoration: none;
+
+				&:hover {
+					color: lighten($color: $red, $amount: 10%);
+				}
+			}
+		}
+	}
+
+	@media only screen and (max-width: 991px) {
+		width: auto;
+		margin-bottom: 4rem;
+	}
+
+	@media (max-width: 436px) {
+		.try-it {
+			flex-direction: column;
+			span:first-child {
+				margin: 0 0 0.8rem;
+			}
+		}
+		form p {
+			font-size: 0.9rem;
+		}
+	}
+	@media (max-width: 360px) {
+		form {
+			padding-left: 1.5rem;
+			padding-right: 1.5rem;
+		}
+	}
+	@media (max-width: 284px) {
+		form input {
+			font-size: 1.5rem;
+			&::placeholder {
+				font-size: 1.3rem;
+			}
+		}
+		form button {
+			font-size: 1rem;
+		}
+	}
+	@media (max-width: 260px) {
+		form input {
+			padding-left: 0.5rem;
+			padding-right: 0.5rem;
+		}
+	}
+}

@@ -1,0 +1,17 @@
+button {
+	width: 100%;
+	border: 0;
+	outline: 0;
+	font-size: 1rem;
+	font-weight: 400;
+	padding: 1rem 0;
+	border-radius: 0.8rem;
+	cursor: pointer;
+	&:focus {
+		outline: none;
+	}
+	&:active {
+		background-color: whiteOverlay();
+		transform: scale(0.98);
+	}
+}

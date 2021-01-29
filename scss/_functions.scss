@@ -1,0 +1,3 @@
+@function whiteOverlay($color: black) {
+	@return lighten($color, 20%);
+}

@@ -1,0 +1,28 @@
+main {
+	min-height: 100vh;
+	@include flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 90%;
+	margin: auto;
+
+	@media only screen and (min-width: 1440px) {
+		width: 114rem;
+	}
+
+	@media only screen and (min-width: 980px) and (max-width: 630px) {
+		height: 64rem;
+	}
+
+	// @media (min-width: 990px) and (max-height: 740px) {
+	// 	&.expand {
+	// 		// height: 75rem;
+	// 		// height: 120vh;
+	// 		transform: scale(0.8);
+	// 	}
+	// }
+
+	@media (max-width: 991px) {
+		display: block;
+	}
+}

@@ -1,0 +1,51 @@
+.title {
+	margin-right: 4rem;
+	width: 56rem;
+	h1 {
+		font-size: 4rem;
+		width: 38rem;
+		font-weight: 700;
+	}
+
+	ul {
+		font-size: 1.6rem;
+		font-weight: 400;
+		margin: 2rem 0;
+		color: darken($color: white, $amount: 8%);
+		@media only screen and (max-width: 1340px) {
+			li {
+				display: inline;
+			}
+		}
+	}
+
+	@media only screen and (max-width: 991px) {
+		width: auto;
+		margin: 0;
+		text-align: center;
+		padding: 8rem 0 4rem;
+		h1 {
+			width: auto;
+			font-size: 3.4rem;
+		}
+		ul {
+			font-size: 3.4rem;
+		}
+	}
+
+	@media only screen and (max-width: 400px) {
+		h1 {
+			font-size: 3rem;
+		}
+	}
+
+	@media only screen and (max-width: 375px) {
+		h1 {
+			font-size: 2rem;
+		}
+
+		ul {
+			font-size: 1.2rem;
+		}
+	}
+}
