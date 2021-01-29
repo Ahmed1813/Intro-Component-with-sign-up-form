@@ -93,7 +93,7 @@ $("button.smb").click(ev => {
 	const emal = validateEmail();
 	const pass = validatePassword();
 
-	if (!(name && emal && pass)) {
+	if (!name && !emal && !pass) {
 		expandForm();
 	} else {
 		shrinkForm();
@@ -101,9 +101,9 @@ $("button.smb").click(ev => {
 
 	// Uncomment following line if you specify action in form
 	// if (name && email && pass) $("form").submit();
-});
 
-firstName.keyup(validateName);
-lastName.keyup(validateName);
-email.keyup(validateEmail);
-password.keyup(validatePassword);
+	firstName.keyup(validateName);
+	lastName.keyup(validateName);
+	email.keyup(validateEmail);
+	password.keyup(validatePassword);
+});
